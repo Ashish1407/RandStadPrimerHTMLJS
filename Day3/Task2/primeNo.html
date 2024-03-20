@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function printprimes(num) {
+        for (let i = 2; i <= num; i++) {
+          if (isPrime(i)) {
+            console.log(i);
+          }
+        }
+      }
+
+      const isPrime = (num) => {
+        for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+          if (num % i == 0) return false;
+        }
+        return num > 1;
+      };
+      var x = prompt("No");
+      printprimes(x);
+    </script>
+  </body>
+</html>

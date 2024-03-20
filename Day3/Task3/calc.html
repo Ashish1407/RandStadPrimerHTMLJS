@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const add = (a, b) => {
+        return a + b;
+      };
+      const sub = (a, b) => {
+        return b - a;
+      };
+      const mul = (a, b) => {
+        return a * b;
+      };
+      const div = (a, b) => {
+        return a / b;
+      };
+
+      var op = prompt("What operation will you perform?");
+      var n1 = prompt("First no.");
+      var n2 = prompt("Second no.");
+      switch (op) {
+        case "+":
+          console.log(add(n1, n2));
+          break;
+        case "-":
+          console.log(sub(n1, n2));
+          break;
+        case "*":
+          console.log(mul(n1, n2));
+          break;
+        case "/":
+          console.log(div(n1, n2));
+          break;
+        default:
+          console.log("Invalid operation");
+          break;
+      }
+    </script>
+  </body>
+</html>
