@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Print the location of "my" in a string "I am enjoying my training".
+      const str = "I am enjoying my training";
+      console.log(str.indexOf("my"));
+
+      //Print the location of "m" in a string "I am enjoying my training".
+      console.log(str.indexOf("m"));
+
+      //Extract the complete string from index 3 of the string "I am enjoying my training" and store it in a variable.
+      const extractedString = str.slice(3);
+      console.log(extractedString);
+
+      //Extract string from index 0 to 4 from the string "I am enjoying my training" and store it in a variable.
+      const newStr = str.slice(0, 5);
+      console.log(newStr);
+
+      //Replace "training" with "journey" in "I am enjoying my training" and store it in a variable.
+      const replacedString = str.replace("training", "journey");
+      console.log(replacedString);
+
+      //Print all the characters of a string using a for loop.
+      for (let i = 0; i < str.length; i++) {
+        console.log(str[i]);
+      }
+
+      //Store string str="a,b,c" into an array.
+      const string = "a,b,c";
+      const array = str.split(",");
+      console.log(array);
+
+      //Remove white spaces from the string str=" abc ".
+      const str = "   abc   ";
+      const trimmedString = str.trim();
+      console.log(trimmedString);
+
+      //Add two strings using the concat() function and print them. Make sure there is a space between concatenated elements.
+      const str1 = "Hello";
+      const str2 = "world!";
+      const concatenatedString = str1.concat(str2);
+      console.log(concatenatedString);
+
+      //Remove 'e' from the following string:
+      const rstr = "abcedgedcve";
+      const removedE = rstr.replace(/e/g, "");
+      console.log(removedE);
+
+      //Convert the following string into an array:
+      const strToArray = "Hello there I am jack";
+      const arr = str.split(" ");
+      console.log(arr);
+
+      // Check if the given string is a palindrome or not:
+      const palStr = "racecar";
+      function checkpalindrome(str) {
+        const reversed = str.split("").reverse().join("");
+        return str === reversed;
+      }
+      console.log(checkpalindrome(palStr));
+
+      //Write a function to check if a given string is a valid email address:
+      const email1 = "example@example.com";
+      const email2 = "invalid@email";
+      function isValidEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailPattern.test(email);
+      }
+      console.log(isValidEmail(email1));
+      console.log(isValidEmail(email2));
+    </script>
+  </body>
+</html>

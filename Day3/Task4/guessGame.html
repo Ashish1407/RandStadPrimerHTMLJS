@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+      console.log("Random Number:", randomNumber);
+      function guessGame() {
+        let inp;
+        while (true) {
+          inp = prompt("Enter a no between 1 and 100");
+
+          if (inp === null) {
+            alert("Enter a no");
+            break;
+          } else {
+            if (inp < 1 || inp > 100) {
+              alert("Enter a no between 1 and 100");
+              continue;
+            }
+          }
+
+          if (inp == randomNumber) {
+            alert("Congratulations! You have guessed the right no.");
+            break;
+          } else if (inp < randomNumber) {
+            alert("Too low! Try again.");
+          } else {
+            alert("Too high! Try again.");
+          }
+        }
+      }
+      guessGame();
+    </script>
+  </body>
+</html>
